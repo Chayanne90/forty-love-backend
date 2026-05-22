@@ -1,10 +1,17 @@
 spring:
+  application:
+    name: forty-love
+    # JWT config
+#    security:
+#      jwt:
+#        secret-key: ${JWT_SECRET}
+#        expiration: 86400000       # 24 hours in ms
+  config:
+    import: optional:file:.env[.properties]
   datasource:
     url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
-  config:
-    import: optional:file:.env[.properties]
 
   jpa:
     hibernate:
