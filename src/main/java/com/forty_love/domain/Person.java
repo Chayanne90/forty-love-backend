@@ -7,8 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "Person")
 public class Person {
@@ -42,53 +40,28 @@ public class Person {
         this.country_code = country_code;
     }
 
-    public Integer getPerson_Id() {
-        return person_Id;
-    }
+    public Integer getPerson_Id() { return person_Id; }
 
-    public void setPerson_Id(Integer person_Id) {
-        this.person_Id = person_Id;
-    }
+    public void setPerson_Id(Integer person_Id) { this.person_Id = person_Id; }
 
 
-    public String getFirst_name() {
-        return first_name;
-    }
+    public String getFirst_name() { return first_name; }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
+    public void setFirst_name(String first_name) { this.first_name = first_name; }
 
+    public String getLast_name() { return last_name; }
 
-    public String getLast_name() {
-        return last_name;
-    }
+    public void setLast_name(String last_name) { this.last_name = last_name; }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
+    public String getDob() { return dob; }
 
-    public String getDob() {
-        return dob;
-    }
+    public void setDob(String dob) { this.dob = dob; }
 
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
+    public String getGender() { return gender; }
 
-    public String getGender() {
-        return gender;
-    }
+    public void setGender(String gender) { this.gender = gender; }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+    public String getCountry_code() { return country_code; }
 
-    public String getCountry_code() {
-        return country_code;
-    }
-
-    public void setCountry_code(String country_code) {
-        this.country_code = country_code;
-    }
+    public void setCountry_code(String country_code) { this.country_code = country_code; }
 }
