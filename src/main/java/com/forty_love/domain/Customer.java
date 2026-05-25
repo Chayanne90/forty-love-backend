@@ -8,13 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Person")
-public class Person {
+@Table(name = "Customer")
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "person_id")
-    private Integer person_Id;
+    @Column(name = "customer_id")
+    private Integer customer_Id;
 
     @Column(name = "f_name", length = 70)
     private String first_name;
@@ -31,8 +31,8 @@ public class Person {
     @Column(name = "country_code", length = 3)
     private String country_code;
 
-    public Person(Integer person_Id, String first_name, String last_name, String dob, String gender, String country_code) {
-        this.person_Id = person_Id;
+    public Customer(Integer customer_Id, String first_name, String last_name, String dob, String gender, String country_code) {
+        this.customer_Id = customer_Id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.dob = dob;
@@ -40,10 +40,9 @@ public class Person {
         this.country_code = country_code;
     }
 
-    public Integer getPerson_Id() { return person_Id; }
+    public Integer getCustomer_Id() { return customer_Id; }
 
-    public void setPerson_Id(Integer person_Id) { this.person_Id = person_Id; }
-
+    public void setCustomer_Id(Integer customer_Id) { this.customer_Id = customer_Id; }
 
     public String getFirst_name() { return first_name; }
 
