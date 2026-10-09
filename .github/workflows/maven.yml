@@ -17,7 +17,7 @@ on:
     
 permissions:
   contents: read
-  dependency-graph: write
+  actions: write
 
 jobs:
   build:
