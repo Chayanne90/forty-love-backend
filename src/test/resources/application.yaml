@@ -1,24 +1,15 @@
 spring:
   application:
-    name: forty-love
-    # JWT config
-#    security:
-#      jwt:
-#        secret-key: ${JWT_SECRET}
-#        expiration: 86400000       # 24 hours in ms
-  config:
-    import: optional:file:.env[.properties]
+    name: tennis-player-tracker
   datasource:
     url: jdbc:h2:mem:testdb
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
-
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
-
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-
-
+        format_sql: true
+    show-sql: true
