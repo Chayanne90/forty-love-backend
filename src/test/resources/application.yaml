@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: forty-love
+    # JWT config
+#    security:
+#      jwt:
+#        secret-key: ${JWT_SECRET}
+#        expiration: 86400000       # 24 hours in ms
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+
