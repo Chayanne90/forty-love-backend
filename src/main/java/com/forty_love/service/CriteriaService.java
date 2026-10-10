@@ -1,5 +1,5 @@
 package com.forty_love.service;
 
 
-public interface CustomerService {
+public interface CriteriaService {
 }
